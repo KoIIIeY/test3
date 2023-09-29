@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+
+  socketio:
+    image: node:lts
+    working_dir: /usr/src/app
+    restart: unless-stopped
+    volumes:
+      - ./socketio:/usr/src/app
+      - ./socketio/node_modules:/usr/src/app/node_modules
+    ports:
+      - 3000:3000
+    command: >
+      bash -c "npm install typescript -g && npm i && tsc && node dist/server.js"
+
