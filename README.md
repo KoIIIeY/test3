@@ -1,5 +1,8 @@
 docker compose up
 
+открой /socketio/resourses/index.html в браузере :)
+
+из постмана 
 
 POST http://localhost:3000/v1/
 
